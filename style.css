@@ -12,8 +12,22 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Indie Flower", cursive; /* Fuente por defecto (handwritten) */
+  font-family: "Indie Flower", cursive; /* Fuente handwritten por defecto */
   background-color: #FFF8E5;           /* Fondo suave */
+}
+
+/* --------------------------------------------
+   Estilos para el canvas de confetis
+   -------------------------------------------- */
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* No interfiere con clics */
+  z-index: 999;         /* Sobre todos los demás elementos */
 }
 
 /* --------------------------------------------
@@ -28,6 +42,11 @@ body {
   justify-content: center;      /* Centra verticalmente */
   text-align: center;           /* Centro horizontal del texto */
   padding: 20px;                /* Espaciado alrededor del contenido */
+}
+
+/* Genera un espacio inferior opcional */
+.whitespace {
+  height: 30vh;
 }
 
 /* --------------------------------------------
@@ -58,26 +77,4 @@ h1.message {
   height: auto;                    /* Mantiene proporción original */
   border-radius: 10px;             /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor */
-}
-/* --------------------------------------------
-   Estilos para el canvas de confetis
-   -------------------------------------------- */
-
-#confetti-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;       /* No interfiere con clics */
-  z-index: 999;               /* Sobre todos los demás elementos */
-}
-
-/* --------------------------------------------
-   (Opcional) Si quieres que el confeti aparezca
-   sólo en cierto momento (por ejemplo, al hacer clic),
-   podrías controlar la visibilidad con clases:
---------------------------------------------- */
-#confetti-canvas.hidden {
-  display: none;
 }
