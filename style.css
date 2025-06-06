@@ -2,20 +2,18 @@
    Reset básico y estilos generales
    -------------------------------------------- */
 
-/* Elimina márgenes y paddings por defecto */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Asegura que html y body ocupen todo el alto */
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Indie Flower", cursive; /* Fuente por defecto del body */
-  background-color: #FFF8E5;           /* Fondo suave para todo el sitio */
+  font-family: "Indie Flower", cursive; /* Fuente por defecto (handwritten) */
+  background-color: #FFF8E5;           /* Fondo suave */
 }
 
 /* --------------------------------------------
@@ -32,34 +30,17 @@ body {
   padding: 20px;                /* Espaciado alrededor del contenido */
 }
 
-/* Genera un espacio inferior (opcional) antes del final de body */
-.whitespace {
-  height: 30vh;
-}
-
 /* --------------------------------------------
-   Estilos para los mensajes de felicitación
+   Estilo para el mensaje en una sola línea
    -------------------------------------------- */
 
-/* Estilo base para ambas líneas de mensaje */
 h1.message {
-  margin: 10px 0;                                /* Separación vertical entre líneas */
-  line-height: 1.2;                              /* Controla el interlineado */
-  color: #333;                                   /* Color de texto */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);    /* Sombra ligera para resaltar */
-}
-
-/* Primera línea: “¡Feliz Cumpleaños! 🎉🥳” */
-h1.message:nth-of-type(1) {
-  font-family: "Great Vibes", cursive;            /* Fuente cursiva elegante */
-  font-size: 4rem;                                /* Tamaño grande */
-}
-
-/* Segunda línea: “¡Que lo pases increíble!” */
-h1.message:nth-of-type(2) {
-  font-family: "Dancing Script", cursive;         /* Fuente cursiva diferente */
-  font-size: 2.5rem;                              /* Un poco más pequeña */
-  margin-bottom: 40px;                            /* Espacio antes del GIF */
+  font-family: "Indie Flower", cursive; /* Fuente handwritten */
+  font-size: 3.5rem;                     /* Tamaño ajustable */
+  color: #333;                           /* Color de texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  white-space: nowrap;                   /* Forzar a que no se divida en varias líneas */
+  margin-bottom: 40px;                   /* Espacio antes del GIF */
 }
 
 /* --------------------------------------------
