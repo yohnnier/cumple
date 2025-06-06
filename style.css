@@ -59,3 +59,25 @@ h1.message {
   border-radius: 10px;             /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor */
 }
+/* --------------------------------------------
+   Estilos para el canvas de confetis
+   -------------------------------------------- */
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;       /* No interfiere con clics */
+  z-index: 999;               /* Sobre todos los demás elementos */
+}
+
+/* --------------------------------------------
+   (Opcional) Si quieres que el confeti aparezca
+   sólo en cierto momento (por ejemplo, al hacer clic),
+   podrías controlar la visibilidad con clases:
+--------------------------------------------- */
+#confetti-canvas.hidden {
+  display: none;
+}
